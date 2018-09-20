@@ -32,7 +32,7 @@ shuffle
 #先攻後攻の乱数
 #0ならPlayerが先行,1ならCPUが先行
 SE=$((RANDOM % 2))
-if [ $ SE = 0 ];then
+if [ $SE = 0 ] ;then
   SEKO1=$Player
 else
   SEKO2=$CPU
