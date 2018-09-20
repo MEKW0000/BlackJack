@@ -31,19 +31,22 @@ shuffle
 
 #先攻後攻の乱数
 #0ならPlayerが先行,1ならCPUが先行
-SE=$((RANDOM % 2))
-if [ $SE = 0 ] ;then
-  SEKO1=$Player
+#カードを引く処理を関数化して、乱数の結果によって処理の順序を決める
+first=$((RANDOM % 2))
+
+#先攻がPlayerの場合
+if [ $first = 0 ];then
+  Player
 else
-  SEKO2=$CPU
+  CPU
 fi
 
-#Playerの1枚目のカード
-Pcard1=${array[0]};
+#後攻がCPUの場合
+if [ $first = 1 ];then
+  CPU
+else
+  Player
+fi
 
-#CPUの1CPUの1枚目のカード
-Ccard1=${array[1]};
 
-#出力
-echo "ゲーム開始 : 先攻"$SEKO1
-echo $SEKO1 : $Pcard1
+#main処理
