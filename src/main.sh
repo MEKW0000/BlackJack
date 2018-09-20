@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#Playerのカード
+Pcard=0;
+
+#CPUのカード
+Ccard=0;
+
 # 1~13の数字が入った配列を生成
 array=();
 for((i=0; i < 12; i++));
