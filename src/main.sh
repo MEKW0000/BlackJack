@@ -50,3 +50,15 @@ fi
 
 
 #main処理
+Player(){
+  card1=${array[0]};
+
+}
+
+CPU(){
+  Ccard1=${array[1]};
+
+]
+
+echo "ゲーム開始 :先攻"
+echo ""
