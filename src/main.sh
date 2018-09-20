@@ -28,3 +28,22 @@ done
 }
 # カードのシャッフル
 shuffle
+
+#先攻後攻の乱数
+#0ならPlayerが先行,1ならCPUが先行
+SE=$((RANDOM % 2))
+if [ $ SE = 0 ];then
+  SEKO1=$Player
+else
+  SEKO2=$CPU
+fi
+
+#Playerの1枚目のカード
+Pcard1=${array[0]};
+
+#CPUの1CPUの1枚目のカード
+Ccard1=${array[1]};
+
+#出力
+echo "ゲーム開始 : 先攻"$SEKO1
+echo $SEKO1 : $Pcard1
