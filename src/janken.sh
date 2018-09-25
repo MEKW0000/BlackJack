@@ -25,11 +25,11 @@ esac
 #playerがグーの時
 if [ $pd = $cd ];then
   echo 'あいこです。'
-elif [ $pd = 'グー' ] && [ $cd = 'チョキ'];then
+elif [ $pd = 'グー' ] && [ $cd = 'チョキ'];
   echo 'playerの勝ちです。'
-elif [ $pd = 'チョキ'] && [ $cd = 'パー'];then
+elif [ $pd = 'チョキ'] && [ $cd = 'パー'];
   echo 'playerの勝ちです。'
-elif [ $pd = 'パー'] && [ $cd = 'グー'];then
+elif [ $pd = 'パー'] && [ $cd = 'グー'];
   echo 'playerの勝ちです。'
 else
   echo 'playerの負けです。'
