@@ -11,6 +11,8 @@ case $pd in
    'p') p='パー';;
 esac
 
-echo $p
 
 #CPUの出し手
+cd=$((RANDOM%3))
+
+echo $cd
