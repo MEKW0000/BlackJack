@@ -35,9 +35,9 @@ if [ $p = $c ];then
   echo 'あいこです。'
 elif [ $p = 'グー' ] && [ $c = 'チョキ' ];then
   echo 'playerの勝ちです。'
-elif [ $p = 'チョキ'] && [ $c = 'パー' ];then
+elif [ $p = 'チョキ' ] && [ $c = 'パー' ];then
   echo 'playerの勝ちです。'
-elif [ $p = 'パー'] && [ $c = 'グー' ];then
+elif [ $p = 'パー' ] && [ $c = 'グー' ];then
   echo 'playerの勝ちです。'
 else
   echo 'playerの負けです。'
