@@ -5,31 +5,33 @@ read -p "じゃんけん(g/c/p):" pd
 
 #playerの出し手を数字に変換
 #0がグー、1がチョキ、2がパー
+p=0;
 case $pd in
-   'g') pd='グー';;
-   'c') pd='チョキ';;
-   'p') pd='パー';;
+   'g') p='グー';;
+   'c') p='チョキ';;
+   'p') p='パー';;
 esac
 
 
 #CPUの出し手
 #0がグー、1がチョキ、2がパー
 cd=$((RANDOM%3));
+c=0;
 case $cd in
-  '0') cd='グー';;
-  '1') cd='チョキ';;
-  '2') cd='パー';;
+  '0') c='グー';;
+  '1') c='チョキ';;
+  '2') c='パー';;
 esac
 
 #じゃんけん処理
 #playerがグーの時
-if [ $pd = $cd ];then
+if [ $p = $c ];then
   echo 'あいこです。'
-elif [ $pd = 'グー' ] && [ $cd = 'チョキ' ];then
+elif [ $p = 'グー' ] && [ $c = 'チョキ' ];then
   echo 'playerの勝ちです。'
-elif [ $pd = 'チョキ'] && [ $cd = 'パー' ];then
+elif [ $p = 'チョキ'] && [ $c = 'パー' ];then
   echo 'playerの勝ちです。'
-elif [ $pd = 'パー'] && [ $cd = 'グー' ];then
+elif [ $p = 'パー'] && [ $c = 'グー' ];then
   echo 'playerの勝ちです。'
 else
   echo 'playerの負けです。'
