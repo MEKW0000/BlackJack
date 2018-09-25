@@ -16,9 +16,9 @@ esac
 #0がグー、1がチョキ、2がパー
 cd=$((RANDOM%3));
 case $cd in
-  0 ) cd='グー';;
-  1 ) cd='チョキ';;
-  2 ) cd='パー';;
+  '0') cd='グー';;
+  '1') cd='チョキ';;
+  '2') cd='パー';;
 esac
 
 #じゃんけん処理
@@ -32,5 +32,5 @@ elif [ $pd = 'チョキ'] && [ $cd = 'パー'];then
 elif [ $pd = 'パー'] && [ $cd = 'グー'];then
   echo 'playerの勝ちです。'
 else
-  echo 'playerの負けです。'  
+  echo 'playerの負けです。'
   fi
