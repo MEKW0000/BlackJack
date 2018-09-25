@@ -81,6 +81,35 @@ Player(){
 	fi
 }
 
+# CPのAI
+# カードを引く(true)かパス(false)するかを判断する
+AI(){
+	# これまでのドローされたカードをリスト化
+	# ただしPlayerの1枚目は含まない
+	list=(${cCards[@]} ${pCards[@]:1})
+
+	# ドローしたカードからまだ引かれてないカードを求める
+	newList=(); # まだ引かれてないカードリスト
+	drowCheck=false # ドローされたかどうか
+	for ((i=1; i < 14; i++));
+	do
+		drowCheck=true
+		for ((t=0; t < ${#list[@]}; t++));
+		do
+
+			# 既に引かれたカードは無視
+			if [ $i = ${list[$t]} ];then
+				# echo "$i は既に引かれている"
+				drowCheck=false
+				break
+			fi
+		done
+
+		if $drowCheck ;then
+			# echo "$i はまだ引かれてないのでリストに追加"
+			newList=(${newList[@]} $i)
+	fi
+	done
 
 	pd=0 # ドローしても21を超えないパターン数
 	pp=0 # ドローしたらバーストするパターン数
@@ -101,7 +130,7 @@ Player(){
 		# パスと判断
 			echo false
 	fi
-
+}
 
 # CP側のメイン処理
 CP(){
