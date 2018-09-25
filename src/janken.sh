@@ -5,9 +5,9 @@ read -p "じゃんけん(g/c/p):" pd
 
 #playerの出し手を数字に変換
 case $pd in
-  'g') p='グー';;
-  'c') p='チョキ';;
-  'p') p='パー';;
+   g) p='グー';;
+   c) p='チョキ';;
+   p) p='パー';;
 esac
 
 echo '$p'
