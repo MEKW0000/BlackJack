@@ -10,4 +10,4 @@ case $pd in
   p') pd='パー';;
 esac
 
-echo $pd;
+echo $pd
