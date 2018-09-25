@@ -23,6 +23,12 @@ case $cd in
   '2') c='パー';;
 esac
 
+
+#判定
+echo '----------------------'
+echo 'player:'$p
+echo 'CPU:'$c
+
 #じゃんけん処理
 #playerがグーの時
 if [ $p = $c ];then
