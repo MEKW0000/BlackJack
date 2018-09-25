@@ -101,7 +101,7 @@ Player(){
 		# パスと判断
 			echo false
 	fi
-}
+
 
 # CP側のメイン処理
 CP(){
